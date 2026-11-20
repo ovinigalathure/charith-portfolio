@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDownRight, ArrowUpRight, MapPin } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Briefcase, Cpu, FileText, Rocket } from 'lucide-react';
 import portrait from '../assets/portrait-full.webp';
 import { profile, stats, marqueeLogos } from '../data';
 import { Counter, useTilt } from './ui';
@@ -10,7 +10,7 @@ const rise = (d) => ({
   transition: { duration: 0.9, delay: d, ease: [0.2, 0.7, 0.2, 1] },
 });
 
-export default function Hero() {
+export default function Hero({ onCV }) {
   const tilt = useTilt(8);
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
@@ -60,6 +60,9 @@ export default function Hero() {
             <button className="btn btn-ghost" onClick={() => scrollTo('ventures')}>
               Explore ventures <ArrowDownRight size={18} />
             </button>
+            <button className="btn btn-ghost" onClick={onCV}>
+              View CV <FileText size={18} />
+            </button>
           </motion.div>
         </div>
 
@@ -76,12 +79,16 @@ export default function Hero() {
             <span className="portrait-gem" />
             <img src={portrait} alt="Charith Liyanaarachchi" className="portrait-img" />
             <div className="portrait-badge badge-a">
-              <strong>D365</strong>
-              <span>ERP Specialist</span>
+              <Rocket size={14} />
+              <span>Entrepreneur</span>
             </div>
             <div className="portrait-badge badge-b">
-              <MapPin size={14} />
-              <span>Sri Lanka</span>
+              <Briefcase size={14} />
+              <span>Business Consultant</span>
+            </div>
+            <div className="portrait-badge badge-c">
+              <Cpu size={14} />
+              <span>IT Solution Provider</span>
             </div>
           </div>
         </motion.div>

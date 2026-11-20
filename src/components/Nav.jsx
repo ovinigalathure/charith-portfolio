@@ -10,7 +10,7 @@ const links = [
   ['credentials', 'Credentials'],
 ];
 
-export default function Nav() {
+export default function Nav({ onCV }) {
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 24 });
   const [scrolled, setScrolled] = useState(false);
@@ -54,6 +54,9 @@ export default function Nav() {
               {label}
             </a>
           ))}
+          <a href="#cv" onClick={(e) => { e.preventDefault(); setOpen(false); onCV(); }}>
+            CV
+          </a>
           <a href="#contact" onClick={go('contact')} className="nav-cta">
             Let&rsquo;s talk
           </a>
