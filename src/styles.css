@@ -621,13 +621,9 @@ body.cv-open { overflow: hidden; }
 .cv-head { text-align: center; }
 .cv-banner {
   position: relative;
-  display: flex;
   height: 76px;
-  align-items: center;
-  justify-content: center;
   margin: -34px -46px 0;
   overflow: hidden;
-  color: #fff;
   background: #37115c;
 }
 .cv-banner::before,
@@ -641,7 +637,6 @@ body.cv-open { overflow: hidden; }
 }
 .cv-banner::before { left: -9%; top: 11px; }
 .cv-banner::after { right: -9%; bottom: 11px; }
-.cv-banner span { position: relative; z-index: 1; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
 .cv-identity { position: relative; margin-top: -36px; }
 .cv-identity img {
   width: 76px;

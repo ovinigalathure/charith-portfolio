@@ -7,9 +7,7 @@ function CVDocument() {
   return (
     <article className="cv-page" id="cv">
       <header className="cv-head">
-        <div className="cv-banner">
-          <span>Curriculum Vitae</span>
-        </div>
+        <div className="cv-banner" aria-hidden="true" />
         <div className="cv-identity">
           <img src={portrait} alt={`${profile.first} ${profile.last}`} />
           <h1>
